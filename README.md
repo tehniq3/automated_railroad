@@ -5,3 +5,4 @@ automated_model_train_1.ino sketch is without pwm
 
 controlled_model_train_1a.ino sketch used pwm control for speed and brake
 
+![schematic](https://github.com/tehniq3/automated_railroad/blob/main/automatic_model_train_schematic.png)
