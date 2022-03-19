@@ -105,7 +105,7 @@ void speed_control() {
   switch(train_control) {
   case CONTROL_DECEL:
     train_speed -= SPEED_DELTA;
-    if(train_speed <= 0) {
+    if(train_speed <= SPEED_MIN) {
       train_speed = 0;
       train_control = CONTROL_STOPPED;
       time_to_leave = millis() + STAY_TIME;
@@ -120,6 +120,7 @@ void speed_control() {
       digitalWrite(DIR, train_dir);
       digitalWrite(DIR2, train_dir2);
       train_control = CONTROL_RUNNING;
+      train_speed = SPEED_MIN;
     }
     break;
   case CONTROL_RUNNING:
